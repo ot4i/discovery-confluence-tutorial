@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+  <policy policyType="confluence" policyName="Confluence1" policyTemplate="online_v1_basic">
+    <credentialName>CompletePolicyProjectConfluence_Confluence1</credentialName>
+    <applicationVersion>v1</applicationVersion>
+    <applicationType>online</applicationType>
+    <authenticationMethod>BASIC</authenticationMethod>
+    <endpointUrl>REPLACE_WITH_YOUR_ENDPOINT_URL</endpointUrl>
+    <contextUrl>REPLACE_WITH_YOUR_REST_API_URL</contextUrl>
+  </policy>
+</policies>
