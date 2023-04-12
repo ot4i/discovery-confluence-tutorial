@@ -1,0 +1,2215 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "displayOrder": 1,
+        "title": "Attachment ID",
+        "description": "Unique identifier for the attachment",
+        "type": "string"
+      },
+      "attachmentType": {
+        "displayOrder": 2,
+        "title": "Type of Attachment",
+        "description": "Type of Attachment",
+        "default": "attachment",
+        "type": "string"
+      },
+      "status": {
+        "displayOrder": 3,
+        "title": "Status",
+        "description": "Status",
+        "enum": [
+          "current",
+          "trashed",
+          "historical",
+          "draft"
+        ],
+        "type": "string"
+      },
+      "title": {
+        "displayOrder": 4,
+        "title": "Title",
+        "description": "Title",
+        "display": {
+          "nameProperty": true
+        },
+        "type": "string"
+      },
+      "space": {
+        "displayOrder": 5,
+        "title": "Space",
+        "description": "Space",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "Space ID",
+            "description": "Unique identifier for the space",
+            "type": "number"
+          },
+          "key": {
+            "displayOrder": 2,
+            "title": "Space key",
+            "description": "Space key",
+            "type": "string"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Space name",
+            "description": "Space name",
+            "type": "string"
+          },
+          "spaceType": {
+            "displayOrder": 4,
+            "title": "Space type",
+            "description": "Space type",
+            "type": "string"
+          },
+          "status": {
+            "displayOrder": 5,
+            "title": "Status",
+            "description": "Status",
+            "type": "string"
+          },
+          "_expandable": {
+            "displayOrder": 6,
+            "title": "Expandable",
+            "description": "Expandable",
+            "type": "object",
+            "properties": {
+              "settings": {
+                "displayOrder": 1,
+                "title": "Settings",
+                "description": "Settings",
+                "type": "string"
+              },
+              "metadata": {
+                "displayOrder": 2,
+                "title": "Metadata",
+                "description": "Metadata",
+                "type": "string"
+              },
+              "operations": {
+                "displayOrder": 3,
+                "title": "Operations",
+                "description": "Operations",
+                "type": "string"
+              },
+              "lookAndFeel": {
+                "displayOrder": 4,
+                "title": "Look and feel",
+                "description": "Look and feel",
+                "type": "string"
+              },
+              "permissions": {
+                "displayOrder": 5,
+                "title": "Permissions",
+                "description": "Permissions",
+                "type": "string"
+              },
+              "icon": {
+                "displayOrder": 6,
+                "title": "Icon",
+                "description": "Icon",
+                "type": "string"
+              },
+              "description": {
+                "displayOrder": 7,
+                "title": "Description",
+                "description": "Description",
+                "type": "string"
+              },
+              "theme": {
+                "displayOrder": 8,
+                "title": "Theme",
+                "description": "Theme",
+                "type": "string"
+              },
+              "history": {
+                "displayOrder": 9,
+                "title": "History",
+                "description": "History",
+                "type": "string"
+              },
+              "homepage": {
+                "displayOrder": 10,
+                "title": "Homepage",
+                "description": "Homepage",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "_links": {
+            "displayOrder": 7,
+            "title": "Links",
+            "description": "Links",
+            "type": "object",
+            "properties": {
+              "webui": {
+                "displayOrder": 1,
+                "title": "Web UI",
+                "description": "Web UI",
+                "type": "string"
+              },
+              "self": {
+                "displayOrder": 2,
+                "title": "Self",
+                "description": "Self",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "history": {
+        "displayOrder": 6,
+        "title": "History",
+        "description": "History",
+        "type": "object",
+        "properties": {
+          "previousVersion": {
+            "displayOrder": 1,
+            "title": "Previous version",
+            "description": "Specifies previous version",
+            "type": "object",
+            "properties": {
+              "by": {
+                "displayOrder": 1,
+                "title": "By",
+                "description": "Specifies Confluence user details who has created this content",
+                "type": "object",
+                "properties": {
+                  "objectType": {
+                    "displayOrder": 1,
+                    "title": "Object type",
+                    "description": "Specifies Confluence object type",
+                    "type": "string"
+                  },
+                  "username": {
+                    "displayOrder": 2,
+                    "title": "Username",
+                    "description": "Specifies user name",
+                    "type": "string"
+                  },
+                  "userKey": {
+                    "displayOrder": 3,
+                    "title": "User Key",
+                    "description": "Specifies user key",
+                    "type": "string"
+                  },
+                  "accountId": {
+                    "displayOrder": 4,
+                    "title": "Account Id",
+                    "description": "Specifies user account id",
+                    "type": "string"
+                  },
+                  "email": {
+                    "displayOrder": 5,
+                    "title": "Email ID",
+                    "description": "Email ID",
+                    "type": "string"
+                  },
+                  "profilePicture": {
+                    "displayOrder": 6,
+                    "title": "Profile picture",
+                    "description": "Profile picture",
+                    "type": "object",
+                    "properties": {
+                      "path": {
+                        "displayOrder": 1,
+                        "title": "Path",
+                        "description": "Path",
+                        "type": "string"
+                      },
+                      "width": {
+                        "displayOrder": 2,
+                        "title": "Width",
+                        "description": "Width",
+                        "type": "number"
+                      },
+                      "height": {
+                        "displayOrder": 3,
+                        "title": "Height",
+                        "description": "Height",
+                        "type": "number"
+                      },
+                      "isDefault": {
+                        "displayOrder": 4,
+                        "title": "Is default",
+                        "description": "Is default",
+                        "type": "boolean"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "displayName": {
+                    "displayOrder": 7,
+                    "title": "Display name",
+                    "description": "Display name",
+                    "type": "string"
+                  },
+                  "_expandable": {
+                    "displayOrder": 8,
+                    "title": "Expandable",
+                    "description": "Expandable",
+                    "type": "object",
+                    "properties": {
+                      "operations": {
+                        "displayOrder": 1,
+                        "title": "Operations",
+                        "description": "Operations",
+                        "type": "string"
+                      },
+                      "details": {
+                        "displayOrder": 2,
+                        "title": "Details",
+                        "description": "Details",
+                        "type": "string"
+                      },
+                      "personalSpace": {
+                        "displayOrder": 3,
+                        "title": "Personal space",
+                        "description": "Personal space",
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "_links": {
+                    "displayOrder": 9,
+                    "title": "Links",
+                    "description": "Links",
+                    "type": "object",
+                    "properties": {
+                      "self": {
+                        "title": "Self",
+                        "description": "Self",
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "when": {
+                "displayOrder": 2,
+                "title": "When",
+                "description": "Specifies content date",
+                "type": "string",
+                "format": "date-time"
+              },
+              "friendlyWhen": {
+                "displayOrder": 3,
+                "title": "Friendly When",
+                "description": "Specifies when the version was user friendly",
+                "type": "string"
+              },
+              "message": {
+                "displayOrder": 4,
+                "title": "Message",
+                "description": "Specifies version message",
+                "type": "string"
+              },
+              "number": {
+                "displayOrder": 5,
+                "title": "Number",
+                "description": "Specifies version number",
+                "type": "number"
+              },
+              "minorEdit": {
+                "displayOrder": 6,
+                "title": "Minor Edit",
+                "description": "Specifies whether a minor edit was done",
+                "type": "boolean"
+              },
+              "syncRev": {
+                "displayOrder": 7,
+                "title": "SyncRev",
+                "description": "SyncRev",
+                "type": "string"
+              },
+              "syncRevSource": {
+                "displayOrder": 8,
+                "title": "syncRevSource",
+                "description": "syncRevSource",
+                "type": "string"
+              },
+              "confRev": {
+                "displayOrder": 9,
+                "title": "confRev",
+                "description": "confRev",
+                "type": "string"
+              },
+              "_expandable": {
+                "displayOrder": 10,
+                "title": "Expandable",
+                "description": "Specifies expandable properties",
+                "type": "object",
+                "properties": {
+                  "collaborators": {
+                    "displayOrder": 1,
+                    "title": "Collaborators",
+                    "description": "Collaborators",
+                    "type": "string"
+                  },
+                  "content": {
+                    "displayOrder": 2,
+                    "title": "Content",
+                    "description": "Specifies version content",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_links": {
+                "displayOrder": 11,
+                "title": "Links",
+                "description": "Specifies version related links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self Link",
+                    "description": "Specifies version link",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "lastUpdated": {
+            "displayOrder": 2,
+            "title": "Last updated",
+            "description": "Last updated",
+            "type": "object",
+            "properties": {
+              "by": {
+                "displayOrder": 1,
+                "title": "Updated by",
+                "description": "Updated by",
+                "type": "object",
+                "properties": {
+                  "userType": {
+                    "displayOrder": 1,
+                    "title": "User type",
+                    "description": "User type",
+                    "type": "string"
+                  },
+                  "username": {
+                    "displayOrder": 2,
+                    "title": "User name",
+                    "description": "User name",
+                    "type": "string"
+                  },
+                  "userKey": {
+                    "displayOrder": 3,
+                    "title": "User key",
+                    "description": "User key",
+                    "type": "string"
+                  },
+                  "accountId": {
+                    "displayOrder": 4,
+                    "title": "Account ID",
+                    "description": "Account ID",
+                    "type": "string"
+                  },
+                  "email": {
+                    "displayOrder": 5,
+                    "title": "Email ID",
+                    "description": "Email ID",
+                    "type": "string"
+                  },
+                  "profilePicture": {
+                    "displayOrder": 6,
+                    "title": "Profile picture",
+                    "description": "Profile picture",
+                    "type": "object",
+                    "properties": {
+                      "path": {
+                        "displayOrder": 1,
+                        "title": "Path",
+                        "description": "Path",
+                        "type": "string"
+                      },
+                      "width": {
+                        "displayOrder": 2,
+                        "title": "Width",
+                        "description": "Width",
+                        "type": "number"
+                      },
+                      "height": {
+                        "displayOrder": 3,
+                        "title": "Height",
+                        "description": "Height",
+                        "type": "number"
+                      },
+                      "isDefault": {
+                        "displayOrder": 4,
+                        "title": "Is default",
+                        "description": "Is default",
+                        "type": "boolean"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "displayName": {
+                    "displayOrder": 7,
+                    "title": "Display name",
+                    "description": "Display name",
+                    "type": "string"
+                  },
+                  "_expandable": {
+                    "displayOrder": 8,
+                    "title": "Expandable",
+                    "description": "Expandable",
+                    "type": "object",
+                    "properties": {
+                      "operations": {
+                        "displayOrder": 1,
+                        "title": "Operations",
+                        "description": "Operations",
+                        "type": "string"
+                      },
+                      "details": {
+                        "displayOrder": 2,
+                        "title": "Details",
+                        "description": "Details",
+                        "type": "string"
+                      },
+                      "personalSpace": {
+                        "displayOrder": 3,
+                        "title": "Personal space",
+                        "description": "Personal space",
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "_links": {
+                    "displayOrder": 9,
+                    "title": "Links",
+                    "description": "Links",
+                    "type": "object",
+                    "properties": {
+                      "self": {
+                        "title": "Self",
+                        "description": "Self",
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "when": {
+                "displayOrder": 2,
+                "title": "When",
+                "description": "When",
+                "type": "string",
+                "format": "date-time"
+              },
+              "friendlyWhen": {
+                "displayOrder": 3,
+                "title": "Friendly when",
+                "description": "Friendly when",
+                "type": "string"
+              },
+              "message": {
+                "displayOrder": 4,
+                "title": "Message",
+                "description": "Message",
+                "type": "string"
+              },
+              "number": {
+                "displayOrder": 5,
+                "title": "Number",
+                "description": "Number",
+                "type": "number"
+              },
+              "minorEdit": {
+                "displayOrder": 6,
+                "title": "Minor edit",
+                "description": "Minor edit",
+                "type": "boolean"
+              },
+              "syncRev": {
+                "displayOrder": 7,
+                "title": "Sync rev",
+                "description": "Sync rev",
+                "type": "string"
+              },
+              "syncRevSource": {
+                "displayOrder": 8,
+                "title": "Sync rev source",
+                "description": "Sync rev source",
+                "type": "string"
+              },
+              "confRev": {
+                "displayOrder": 9,
+                "title": "Conf rev",
+                "description": "Conf rev",
+                "type": "string"
+              },
+              "_expandable": {
+                "displayOrder": 10,
+                "title": "Expandable",
+                "description": "Expandable",
+                "type": "object",
+                "properties": {
+                  "collaborators": {
+                    "displayOrder": 1,
+                    "title": "Collaborators",
+                    "description": "Collaborators",
+                    "type": "string"
+                  },
+                  "content": {
+                    "displayOrder": 2,
+                    "title": "Content",
+                    "description": "Content",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_links": {
+                "displayOrder": 11,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "latest": {
+            "displayOrder": 3,
+            "title": "Latest",
+            "description": "Latest",
+            "type": "boolean"
+          },
+          "createdBy": {
+            "displayOrder": 4,
+            "title": "Created by",
+            "description": "Created by",
+            "type": "object",
+            "properties": {
+              "userType": {
+                "displayOrder": 1,
+                "title": "User type",
+                "description": "User type",
+                "type": "string"
+              },
+              "username": {
+                "displayOrder": 2,
+                "title": "User name",
+                "description": "User name",
+                "type": "string"
+              },
+              "userKey": {
+                "displayOrder": 3,
+                "title": "User key",
+                "description": "User key",
+                "type": "string"
+              },
+              "accountId": {
+                "displayOrder": 4,
+                "title": "Account ID",
+                "description": "Account ID",
+                "type": "string"
+              },
+              "email": {
+                "displayOrder": 5,
+                "title": "Email ID",
+                "description": "Email ID",
+                "type": "string"
+              },
+              "profilePicture": {
+                "displayOrder": 6,
+                "title": "Profile picture",
+                "description": "Profile picture",
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "displayOrder": 1,
+                    "title": "Path",
+                    "description": "Path",
+                    "type": "string"
+                  },
+                  "width": {
+                    "displayOrder": 2,
+                    "title": "Width",
+                    "description": "Width",
+                    "type": "number"
+                  },
+                  "height": {
+                    "displayOrder": 3,
+                    "title": "Height",
+                    "description": "Height",
+                    "type": "number"
+                  },
+                  "isDefault": {
+                    "displayOrder": 4,
+                    "title": "Is default",
+                    "description": "Is default",
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "displayName": {
+                "displayOrder": 7,
+                "title": "Display name",
+                "description": "Display name",
+                "type": "string"
+              },
+              "_expandable": {
+                "displayOrder": 8,
+                "title": "Expandable",
+                "description": "Expandable",
+                "type": "object",
+                "properties": {
+                  "operations": {
+                    "displayOrder": 1,
+                    "title": "Operations",
+                    "description": "Operations",
+                    "type": "string"
+                  },
+                  "details": {
+                    "displayOrder": 2,
+                    "title": "Details",
+                    "description": "Details",
+                    "type": "string"
+                  },
+                  "personalSpace": {
+                    "displayOrder": 3,
+                    "title": "Personal space",
+                    "description": "Personal space",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_links": {
+                "displayOrder": 9,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "createdDate": {
+            "displayOrder": 5,
+            "title": "Created date",
+            "description": "Created date",
+            "type": "string",
+            "format": "date-time"
+          },
+          "contributors": {
+            "displayOrder": 6,
+            "title": "Contributors",
+            "description": "Contributors",
+            "type": "object",
+            "properties": {
+              "_expandable": {
+                "title": "Expandable",
+                "description": "Expandable",
+                "type": "object",
+                "properties": {
+                  "publishers": {
+                    "title": "Publishers",
+                    "description": "Publishers",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "_expandable": {
+            "displayOrder": 7,
+            "title": "Expandable",
+            "description": "Expandable",
+            "type": "object",
+            "properties": {
+              "lastUpdated": {
+                "displayOrder": 1,
+                "title": "Last updated",
+                "description": "Last updated",
+                "type": "string"
+              },
+              "previousVersion": {
+                "displayOrder": 2,
+                "title": "Previous version",
+                "description": "Previous version",
+                "type": "string"
+              },
+              "contributors": {
+                "displayOrder": 3,
+                "title": "Contributors",
+                "description": "Contributors",
+                "type": "string"
+              },
+              "nextVersion": {
+                "displayOrder": 4,
+                "title": "Next version",
+                "description": "Next version",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "_links": {
+            "displayOrder": 8,
+            "title": "Links",
+            "description": "Links",
+            "type": "object",
+            "properties": {
+              "self": {
+                "title": "Self",
+                "description": "Self",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "version": {
+        "displayOrder": 7,
+        "title": "Version",
+        "description": "Version",
+        "type": "object",
+        "properties": {
+          "by": {
+            "displayOrder": 1,
+            "title": "Updated by",
+            "description": "Updated by",
+            "type": "object",
+            "properties": {
+              "userType": {
+                "displayOrder": 1,
+                "title": "User type",
+                "description": "Type of User",
+                "type": "string"
+              },
+              "username": {
+                "displayOrder": 2,
+                "title": "User name",
+                "description": "User name",
+                "type": "string"
+              },
+              "userKey": {
+                "displayOrder": 3,
+                "title": "User key",
+                "description": "User key",
+                "type": "string"
+              },
+              "accountId": {
+                "displayOrder": 4,
+                "title": "Account ID",
+                "description": "Account ID",
+                "type": "string"
+              },
+              "email": {
+                "displayOrder": 5,
+                "title": "Email ID",
+                "description": "Email ID",
+                "type": "string"
+              },
+              "profilePicture": {
+                "displayOrder": 6,
+                "title": "Profile picture",
+                "description": "Profile picture",
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "displayOrder": 1,
+                    "title": "Path",
+                    "description": "Path",
+                    "type": "string"
+                  },
+                  "width": {
+                    "displayOrder": 2,
+                    "title": "Width",
+                    "description": "Width",
+                    "type": "number"
+                  },
+                  "height": {
+                    "displayOrder": 3,
+                    "title": "Height",
+                    "description": "Height",
+                    "type": "number"
+                  },
+                  "isDefault": {
+                    "displayOrder": 4,
+                    "title": "Is default",
+                    "description": "Is default",
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "displayName": {
+                "displayOrder": 7,
+                "title": "Display name",
+                "description": "Display name",
+                "type": "string"
+              },
+              "_expandable": {
+                "displayOrder": 8,
+                "title": "Expandable",
+                "description": "Expandable",
+                "type": "object",
+                "properties": {
+                  "operations": {
+                    "displayOrder": 1,
+                    "title": "Operations",
+                    "description": "Operations",
+                    "type": "string"
+                  },
+                  "details": {
+                    "displayOrder": 2,
+                    "title": "Details",
+                    "description": "Details",
+                    "type": "string"
+                  },
+                  "personalSpace": {
+                    "displayOrder": 3,
+                    "title": "Personal space",
+                    "description": "Personal space",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_links": {
+                "displayOrder": 9,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "when": {
+            "displayOrder": 2,
+            "title": "When",
+            "description": "When",
+            "type": "string",
+            "format": "date-time"
+          },
+          "friendlyWhen": {
+            "displayOrder": 3,
+            "title": "Friendly when",
+            "description": "Friendly when",
+            "type": "string"
+          },
+          "message": {
+            "displayOrder": 4,
+            "title": "Message",
+            "description": "Message",
+            "type": "string"
+          },
+          "number": {
+            "displayOrder": 5,
+            "title": "Number",
+            "description": "Number",
+            "type": "number"
+          },
+          "minorEdit": {
+            "displayOrder": 6,
+            "title": "Minor edit",
+            "description": "Minor edit",
+            "type": "boolean"
+          },
+          "syncRev": {
+            "displayOrder": 7,
+            "title": "Sync rev",
+            "description": "Sync rev",
+            "type": "string"
+          },
+          "syncRevSource": {
+            "displayOrder": 8,
+            "title": "Sync rev source",
+            "description": "Sync rev source",
+            "type": "string"
+          },
+          "confRev": {
+            "displayOrder": 9,
+            "title": "Conf rev",
+            "description": "Conf rev",
+            "type": "string"
+          },
+          "_expandable": {
+            "displayOrder": 10,
+            "title": "Expandable",
+            "description": "Expandable",
+            "type": "object",
+            "properties": {
+              "collaborators": {
+                "displayOrder": 1,
+                "title": "Collaborators",
+                "description": "Collaborators",
+                "type": "string"
+              },
+              "content": {
+                "displayOrder": 2,
+                "title": "Content",
+                "description": "Content",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "_links": {
+            "displayOrder": 11,
+            "title": "Links",
+            "description": "Links",
+            "type": "object",
+            "properties": {
+              "self": {
+                "title": "Self",
+                "description": "Self",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "ancestors": {
+        "displayOrder": 8,
+        "title": "Ancestors",
+        "description": "Ancestors",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "displayOrder": 1,
+              "title": "ID",
+              "description": "ID",
+              "type": "string"
+            },
+            "ancestorsType": {
+              "displayOrder": 2,
+              "title": "Ancestors Type",
+              "description": "Type",
+              "type": "string"
+            },
+            "status": {
+              "displayOrder": 3,
+              "title": "Status",
+              "description": "Status",
+              "type": "string"
+            },
+            "title": {
+              "displayOrder": 4,
+              "title": "Title",
+              "description": "Title",
+              "type": "string"
+            },
+            "macroRenderedOutput": {
+              "displayOrder": 5,
+              "title": "Macro rendered output",
+              "description": "Macro rendered output",
+              "type": "object"
+            },
+            "extensions": {
+              "displayOrder": 6,
+              "title": "Extensions",
+              "description": "Extensions",
+              "type": "object",
+              "properties": {
+                "position": {
+                  "title": "Position",
+                  "description": "Position",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "_expandable": {
+              "displayOrder": 7,
+              "title": "Expandable",
+              "description": "Expandable",
+              "type": "object",
+              "properties": {
+                "childTypes": {
+                  "displayOrder": 1,
+                  "title": "Child types",
+                  "description": "Child types",
+                  "type": "string"
+                },
+                "container": {
+                  "displayOrder": 2,
+                  "title": "Container",
+                  "description": "Container",
+                  "type": "string"
+                },
+                "metadata": {
+                  "displayOrder": 3,
+                  "title": "Metadata",
+                  "description": "Metadata",
+                  "type": "string"
+                },
+                "operations": {
+                  "displayOrder": 4,
+                  "title": "Operations",
+                  "description": "Operations",
+                  "type": "string"
+                },
+                "children": {
+                  "displayOrder": 5,
+                  "title": "Children",
+                  "description": "Children",
+                  "type": "string"
+                },
+                "restrictions": {
+                  "displayOrder": 6,
+                  "title": "Restrictions",
+                  "description": "Restrictions",
+                  "type": "string"
+                },
+                "history": {
+                  "displayOrder": 7,
+                  "title": "History",
+                  "description": "History",
+                  "type": "string"
+                },
+                "ancestors": {
+                  "displayOrder": 8,
+                  "title": "Ancestors",
+                  "description": "Ancestors",
+                  "type": "string"
+                },
+                "body": {
+                  "displayOrder": 9,
+                  "title": "Body",
+                  "description": "Body",
+                  "type": "string"
+                },
+                "version": {
+                  "displayOrder": 10,
+                  "title": "Version",
+                  "description": "Version",
+                  "type": "string"
+                },
+                "descendants": {
+                  "displayOrder": 11,
+                  "title": "Descendants",
+                  "description": "Descendants",
+                  "type": "string"
+                },
+                "space": {
+                  "displayOrder": 12,
+                  "title": "Space",
+                  "description": "Space",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "_links": {
+              "displayOrder": 8,
+              "title": "Links",
+              "description": "Links",
+              "type": "object",
+              "properties": {
+                "webui": {
+                  "displayOrder": 1,
+                  "title": "Web UI",
+                  "description": "Web UI",
+                  "type": "string"
+                },
+                "editui": {
+                  "displayOrder": 2,
+                  "title": "Edit UI",
+                  "description": "Edit UI",
+                  "type": "string"
+                },
+                "tinyui": {
+                  "displayOrder": 3,
+                  "title": "Tiny UI",
+                  "description": "Tiny UI",
+                  "type": "string"
+                },
+                "self": {
+                  "displayOrder": 4,
+                  "title": "Self",
+                  "description": "Self",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "operations": {
+        "displayOrder": 9,
+        "title": "Operations",
+        "description": "Operations",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "displayOrder": 1,
+              "title": "Operation",
+              "description": "Operation",
+              "type": "string"
+            },
+            "targetType": {
+              "displayOrder": 2,
+              "title": "Target type",
+              "description": "Target type",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "children": {
+        "displayOrder": 10,
+        "title": "Children",
+        "description": "Children",
+        "type": "object",
+        "properties": {
+          "comment": {
+            "displayOrder": 1,
+            "title": "Comment",
+            "description": "Comment",
+            "type": "object",
+            "properties": {
+              "results": {
+                "displayOrder": 1,
+                "title": "Results",
+                "description": "Results",
+                "type": "array"
+              },
+              "start": {
+                "displayOrder": 2,
+                "title": "Start",
+                "description": "Start",
+                "type": "number"
+              },
+              "limit": {
+                "displayOrder": 3,
+                "title": "Limit",
+                "description": "Limit",
+                "type": "number"
+              },
+              "size": {
+                "displayOrder": 4,
+                "title": "Size",
+                "description": "Size",
+                "type": "number"
+              },
+              "_links": {
+                "displayOrder": 5,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "_links": {
+            "displayOrder": 2,
+            "title": "Links",
+            "description": "Links",
+            "type": "object",
+            "properties": {
+              "self": {
+                "title": "Self",
+                "description": "Self",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "childTypes": {
+        "displayOrder": 11,
+        "title": "Child types",
+        "description": "Child types",
+        "type": "object",
+        "properties": {
+          "comment": {
+            "title": "Comment",
+            "description": "Comment",
+            "type": "object",
+            "properties": {
+              "value": {
+                "displayOrder": 1,
+                "title": "Value",
+                "description": "Value",
+                "type": "boolean"
+              },
+              "_links": {
+                "displayOrder": 2,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "descendants": {
+        "displayOrder": 12,
+        "title": "Descendants",
+        "description": "Descendants",
+        "type": "object",
+        "properties": {
+          "comment": {
+            "displayOrder": 1,
+            "title": "Comment",
+            "description": "Comment",
+            "type": "object",
+            "properties": {
+              "results": {
+                "displayOrder": 1,
+                "title": "Results",
+                "description": "Results",
+                "type": "array"
+              },
+              "start": {
+                "displayOrder": 2,
+                "title": "Start",
+                "description": "Start",
+                "type": "number"
+              },
+              "limit": {
+                "displayOrder": 3,
+                "title": "Limit",
+                "description": "Limit",
+                "type": "number"
+              },
+              "size": {
+                "displayOrder": 4,
+                "title": "Size",
+                "description": "Size",
+                "type": "number"
+              },
+              "_links": {
+                "displayOrder": 5,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "_links": {
+            "displayOrder": 2,
+            "title": "Links",
+            "description": "Links",
+            "type": "object",
+            "properties": {
+              "self": {
+                "title": "Self",
+                "description": "Self",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "container": {
+        "displayOrder": 13,
+        "title": "Container",
+        "description": "Container",
+        "type": "object",
+        "properties": {
+          "id": {
+            "displayOrder": 1,
+            "title": "ID",
+            "description": "ID",
+            "type": "string"
+          },
+          "containerType": {
+            "displayOrder": 2,
+            "title": "Container Type",
+            "description": "Type",
+            "enum": [
+              "Page",
+              "Blogpost"
+            ],
+            "type": "string"
+          },
+          "status": {
+            "displayOrder": 3,
+            "title": "Status",
+            "description": "Status",
+            "type": "string"
+          },
+          "title": {
+            "displayOrder": 4,
+            "title": "Title",
+            "description": "Title",
+            "type": "string"
+          },
+          "macroRenderedOutput": {
+            "displayOrder": 5,
+            "title": "Macro rendered output",
+            "description": "Macro rendered output",
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          },
+          "extensions": {
+            "displayOrder": 6,
+            "title": "Extensions",
+            "description": "Extensions",
+            "type": "object",
+            "properties": {
+              "position": {
+                "title": "Position",
+                "description": "Position",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "_expandable": {
+            "displayOrder": 7,
+            "title": "Expandable",
+            "description": "Expandable",
+            "type": "object",
+            "properties": {
+              "childTypes": {
+                "displayOrder": 1,
+                "title": "Child types",
+                "description": "Child types",
+                "type": "string"
+              },
+              "container": {
+                "displayOrder": 2,
+                "title": "Container",
+                "description": "Container",
+                "type": "string"
+              },
+              "metadata": {
+                "displayOrder": 3,
+                "title": "Metadata",
+                "description": "Metadata",
+                "type": "string"
+              },
+              "operations": {
+                "displayOrder": 4,
+                "title": "Operations",
+                "description": "Operations",
+                "type": "string"
+              },
+              "children": {
+                "displayOrder": 5,
+                "title": "Children",
+                "description": "Children",
+                "type": "string"
+              },
+              "restrictions": {
+                "displayOrder": 6,
+                "title": "Restrictions",
+                "description": "Restrictions",
+                "type": "string"
+              },
+              "history": {
+                "displayOrder": 7,
+                "title": "History",
+                "description": "History",
+                "type": "string"
+              },
+              "ancestors": {
+                "displayOrder": 8,
+                "title": "Ancestors",
+                "description": "Ancestors",
+                "type": "string"
+              },
+              "body": {
+                "displayOrder": 9,
+                "title": "Body",
+                "description": "Body",
+                "type": "string"
+              },
+              "version": {
+                "displayOrder": 10,
+                "title": "Version",
+                "description": "Version",
+                "type": "string"
+              },
+              "descendants": {
+                "displayOrder": 11,
+                "title": "Descendants",
+                "description": "Descendants",
+                "type": "string"
+              },
+              "space": {
+                "displayOrder": 12,
+                "title": "Space",
+                "description": "Space",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "_links": {
+            "displayOrder": 8,
+            "title": "Links",
+            "description": "Links",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "Self",
+                "description": "Self",
+                "type": "string"
+              },
+              "tinyui": {
+                "displayOrder": 2,
+                "title": "Tiny UI",
+                "description": "Tiny UI",
+                "type": "string"
+              },
+              "editui": {
+                "displayOrder": 3,
+                "title": "Edit UI",
+                "description": "Edit UI",
+                "type": "string"
+              },
+              "webui": {
+                "displayOrder": 4,
+                "title": "Web UI",
+                "description": "Web UI",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "macroRenderedOutput": {
+        "displayOrder": 14,
+        "title": "Macro rendered output",
+        "description": "Macro rendered output",
+        "type": "string"
+      },
+      "body": {
+        "displayOrder": 15,
+        "title": "Body",
+        "description": "Specifies page body",
+        "type": "object",
+        "properties": {
+          "_expandable": {
+            "title": "Expandable",
+            "description": "Expandable",
+            "type": "object",
+            "properties": {
+              "editor": {
+                "displayOrder": 1,
+                "title": "Editor",
+                "description": "Editor",
+                "type": "string"
+              },
+              "atlas_doc_format": {
+                "displayOrder": 2,
+                "title": "Atlas doc format",
+                "description": "Atlas doc format",
+                "type": "string"
+              },
+              "export_view": {
+                "displayOrder": 3,
+                "title": "Export view",
+                "description": "Export view",
+                "type": "string"
+              },
+              "styled_view": {
+                "displayOrder": 4,
+                "title": "Styled view",
+                "description": "Styled view",
+                "type": "string"
+              },
+              "storage": {
+                "displayOrder": 5,
+                "title": "Storage",
+                "description": "Storage",
+                "type": "string"
+              },
+              "editor2": {
+                "displayOrder": 6,
+                "title": "Editor 2",
+                "description": "Editor 2",
+                "type": "string"
+              },
+              "anonymous_export_view": {
+                "displayOrder": 7,
+                "title": "Anonymous export view",
+                "description": "Anonymous export view",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "metadata": {
+        "displayOrder": 16,
+        "title": "Metadata",
+        "description": "Metadata",
+        "type": "object",
+        "properties": {
+          "mediaType": {
+            "displayOrder": 1,
+            "title": "Media type",
+            "description": "Media type",
+            "type": "string"
+          },
+          "currentuser": {
+            "displayOrder": 2,
+            "title": "Current user",
+            "description": "Current user",
+            "type": "object",
+            "properties": {
+              "_expandable": {
+                "title": "Expandable",
+                "description": "Expandable",
+                "type": "object",
+                "properties": {
+                  "favourited": {
+                    "displayOrder": 1,
+                    "title": "Favourited",
+                    "description": "Favourited",
+                    "type": "string"
+                  },
+                  "lastmodified": {
+                    "displayOrder": 2,
+                    "title": "Last modified",
+                    "description": "Last modified",
+                    "type": "string"
+                  },
+                  "viewed": {
+                    "displayOrder": 3,
+                    "title": "Viewed",
+                    "description": "Viewed",
+                    "type": "string"
+                  },
+                  "lastcontributed": {
+                    "displayOrder": 4,
+                    "title": "Last contributed",
+                    "description": "Last contributed",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "labels": {
+            "displayOrder": 3,
+            "title": "Labels",
+            "description": "Labels",
+            "type": "object",
+            "properties": {
+              "results": {
+                "displayOrder": 1,
+                "title": "Results",
+                "description": "Results",
+                "type": "array"
+              },
+              "start": {
+                "displayOrder": 2,
+                "title": "Start",
+                "description": "Start",
+                "type": "number"
+              },
+              "limit": {
+                "displayOrder": 3,
+                "title": "Limit",
+                "description": "Limit",
+                "type": "number"
+              },
+              "size": {
+                "displayOrder": 4,
+                "title": "Size",
+                "description": "Size",
+                "type": "number"
+              },
+              "_links": {
+                "displayOrder": 5,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "next": {
+                    "displayOrder": 1,
+                    "title": "Next link",
+                    "description": "Next link",
+                    "type": "string"
+                  },
+                  "self": {
+                    "displayOrder": 2,
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "properties": {
+            "displayOrder": 4,
+            "title": "Properties",
+            "description": "Properties",
+            "type": "object",
+            "properties": {
+              "_links": {
+                "title": "Links",
+                "description": "Specifies related links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self Link",
+                    "description": "Self link",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "_expandable": {
+            "displayOrder": 5,
+            "title": "Expandable",
+            "description": "Expandable",
+            "type": "object",
+            "properties": {
+              "frontend": {
+                "displayOrder": 1,
+                "title": "Frontend",
+                "description": "Frontend",
+                "type": "string"
+              },
+              "likes": {
+                "displayOrder": 2,
+                "title": "Likes",
+                "description": "Likes",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "comment": {
+            "displayOrder": 6,
+            "title": "Comment",
+            "description": "Comment",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "extensions": {
+        "displayOrder": 17,
+        "title": "Extensions",
+        "description": "Extensions",
+        "type": "object",
+        "properties": {
+          "mediaType": {
+            "displayOrder": 1,
+            "title": "Media type",
+            "description": "Media type",
+            "type": "string"
+          },
+          "fileSize": {
+            "displayOrder": 2,
+            "title": "File size",
+            "description": "File size",
+            "type": "number"
+          },
+          "comment": {
+            "displayOrder": 3,
+            "title": "Comment",
+            "description": "Comment",
+            "type": "string"
+          },
+          "mediaTypeDescription": {
+            "displayOrder": 4,
+            "title": "Media type description",
+            "description": "Media type description",
+            "type": "string"
+          },
+          "base": {
+            "displayOrder": 5,
+            "title": "Self",
+            "description": "Self",
+            "type": "string"
+          },
+          "download": {
+            "displayOrder": 6,
+            "title": "Download",
+            "description": "Download",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "restrictions": {
+        "displayOrder": 18,
+        "title": "Restrictions",
+        "description": "Restrictions",
+        "type": "object",
+        "properties": {
+          "read": {
+            "displayOrder": 1,
+            "title": "Read",
+            "description": "Read",
+            "type": "object",
+            "properties": {
+              "operation": {
+                "displayOrder": 1,
+                "title": "Operation",
+                "description": "Operation",
+                "type": "string"
+              },
+              "restrictions": {
+                "displayOrder": 2,
+                "title": "Restrictions",
+                "description": "Restrictions",
+                "type": "object",
+                "properties": {
+                  "user": {
+                    "displayOrder": 1,
+                    "title": "User",
+                    "description": "User",
+                    "type": "object",
+                    "properties": {
+                      "results": {
+                        "displayOrder": 1,
+                        "title": "Results",
+                        "description": "Results",
+                        "type": "array"
+                      },
+                      "start": {
+                        "displayOrder": 2,
+                        "title": "Start",
+                        "description": "Start",
+                        "type": "number"
+                      },
+                      "limit": {
+                        "displayOrder": 3,
+                        "title": "Limit",
+                        "description": "Limit",
+                        "type": "number"
+                      },
+                      "size": {
+                        "displayOrder": 4,
+                        "title": "Size",
+                        "description": "Size",
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "group": {
+                    "displayOrder": 2,
+                    "title": "Group",
+                    "description": "Group",
+                    "type": "object",
+                    "properties": {
+                      "results": {
+                        "displayOrder": 1,
+                        "title": "Results",
+                        "description": "Results",
+                        "type": "array"
+                      },
+                      "start": {
+                        "displayOrder": 2,
+                        "title": "Start",
+                        "description": "Start",
+                        "type": "number"
+                      },
+                      "limit": {
+                        "displayOrder": 3,
+                        "title": "Limit",
+                        "description": "Limit",
+                        "type": "number"
+                      },
+                      "size": {
+                        "displayOrder": 4,
+                        "title": "Size",
+                        "description": "Size",
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_expandable": {
+                "displayOrder": 3,
+                "title": "Expandable",
+                "description": "Expandable",
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "title": "Content",
+                    "description": "Content",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_links": {
+                "displayOrder": 4,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "update": {
+            "displayOrder": 2,
+            "title": "Update",
+            "description": "Update",
+            "type": "object",
+            "properties": {
+              "operation": {
+                "displayOrder": 1,
+                "title": "Operation",
+                "description": "Operation",
+                "type": "string"
+              },
+              "restrictions": {
+                "displayOrder": 2,
+                "title": "Restrictions",
+                "description": "Restrictions",
+                "type": "object",
+                "properties": {
+                  "user": {
+                    "displayOrder": 1,
+                    "title": "User",
+                    "description": "User",
+                    "type": "object",
+                    "properties": {
+                      "results": {
+                        "displayOrder": 1,
+                        "title": "Results",
+                        "description": "Results",
+                        "type": "array"
+                      },
+                      "start": {
+                        "displayOrder": 2,
+                        "title": "Start",
+                        "description": "Start",
+                        "type": "number"
+                      },
+                      "limit": {
+                        "displayOrder": 3,
+                        "title": "Limit",
+                        "description": "Limit",
+                        "type": "number"
+                      },
+                      "size": {
+                        "displayOrder": 4,
+                        "title": "Size",
+                        "description": "Size",
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "group": {
+                    "displayOrder": 2,
+                    "title": "Group",
+                    "description": "Group",
+                    "type": "object",
+                    "properties": {
+                      "results": {
+                        "displayOrder": 1,
+                        "title": "Results",
+                        "description": "Results",
+                        "type": "array"
+                      },
+                      "start": {
+                        "displayOrder": 2,
+                        "title": "Start",
+                        "description": "Start",
+                        "type": "number"
+                      },
+                      "limit": {
+                        "displayOrder": 3,
+                        "title": "Limit",
+                        "description": "Limit",
+                        "type": "number"
+                      },
+                      "size": {
+                        "displayOrder": 4,
+                        "title": "Size",
+                        "description": "Size",
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_expandable": {
+                "displayOrder": 3,
+                "title": "Expandable",
+                "description": "Expandable",
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "title": "Content",
+                    "description": "Content",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "_links": {
+                "displayOrder": 4,
+                "title": "Links",
+                "description": "Links",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "title": "Self",
+                    "description": "Self",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "_links": {
+            "displayOrder": 3,
+            "title": "Links",
+            "description": "Links",
+            "type": "object",
+            "properties": {
+              "self": {
+                "title": "Self",
+                "description": "Self",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "_expandable": {
+        "displayOrder": 19,
+        "title": "Expandable",
+        "description": "Expandable",
+        "type": "object",
+        "properties": {
+          "container": {
+            "displayOrder": 1,
+            "title": "Container",
+            "description": "Container",
+            "type": "string"
+          },
+          "metadata": {
+            "displayOrder": 2,
+            "title": "Metadata",
+            "description": "Metadata",
+            "type": "string"
+          },
+          "extensions": {
+            "displayOrder": 3,
+            "title": "Extensions",
+            "description": "Extensions",
+            "type": "string"
+          },
+          "operations": {
+            "displayOrder": 4,
+            "title": "Operations",
+            "description": "Operations",
+            "type": "string"
+          },
+          "children": {
+            "displayOrder": 5,
+            "title": "Children",
+            "description": "Children",
+            "type": "string"
+          },
+          "history": {
+            "displayOrder": 6,
+            "title": "History",
+            "description": "History",
+            "type": "string"
+          },
+          "ancestors": {
+            "displayOrder": 7,
+            "title": "Ancestors",
+            "description": "Ancestors",
+            "type": "string"
+          },
+          "body": {
+            "displayOrder": 8,
+            "title": "Body",
+            "description": "Body",
+            "type": "string"
+          },
+          "version": {
+            "displayOrder": 9,
+            "title": "Version",
+            "description": "Version",
+            "type": "string"
+          },
+          "descendants": {
+            "displayOrder": 10,
+            "title": "Descendants",
+            "description": "Descendants",
+            "type": "string"
+          },
+          "space": {
+            "displayOrder": 11,
+            "title": "Space",
+            "description": "Space",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "_links": {
+        "displayOrder": 20,
+        "title": "Links",
+        "description": "Links",
+        "type": "object",
+        "properties": {
+          "webui": {
+            "displayOrder": 1,
+            "title": "Web UI",
+            "description": "Web UI",
+            "type": "string"
+          },
+          "self": {
+            "displayOrder": 2,
+            "title": "Self",
+            "description": "Self",
+            "type": "string"
+          },
+          "context": {
+            "displayOrder": 3,
+            "title": "Self",
+            "description": "Self",
+            "type": "string"
+          },
+          "collection": {
+            "displayOrder": 4,
+            "title": "Self",
+            "description": "Self",
+            "type": "string"
+          },
+          "base": {
+            "displayOrder": 5,
+            "title": "Self",
+            "description": "Self",
+            "type": "string"
+          },
+          "download": {
+            "displayOrder": 6,
+            "title": "Download",
+            "description": "Download",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "title": "Attachment",
+    "additionalProperties": false
+  },
+  "type": "array",
+  "title": "Attachment"
+}
